@@ -14,7 +14,6 @@ function App() {
 
     // Click Function
     function onClick(id) { 
-      const rateId = id
       setRatings(ratings.map((rating) => rating.id === id ? 
         {...rating, active: !rating.active} : rating))
 
@@ -23,7 +22,7 @@ function App() {
       }
 
       // Toggle
-      function onSubmit(id) { 
+      function onSubmit() { 
         setToggle(prevState => !prevState)
 
       }
