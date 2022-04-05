@@ -7,7 +7,7 @@ const Buttons = (props) => {
 
 
     const ratingElements = props.rate.map((data) => (
-        <Button key={data.id} onClick={props.onClick} data={data} />    
+        <Button key={data.id} onClick={props.btnClick} data={data} />    
     ))
 
 

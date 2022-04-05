@@ -13,23 +13,21 @@ function App() {
 
 
     // Click Function
-    function onClick(id) { 
+    function btnClick(id) { 
       setRatings(ratings.map((rating) => rating.id === id ? 
         {...rating, active: !rating.active} : rating))
 
-      setNextPage(prevState => !prevState)
+        setNextPage(prevState => !prevState)
       
       }
 
       // Toggle
-      function onSubmit() { 
-        setToggle(prevState => !prevState)
-
+      function onSubmit() {
+          setToggle(prevState => !prevState)
       }
 
       const activeRating = ratings.map((rating) => rating.active ? 
       <ThankYou key={rating.id} id={rating.id} /> : '')
-
  
 
   return (
@@ -44,18 +42,18 @@ function App() {
 
         <TopPage 
           nextPage={nextPage}
-          onClick={onClick} 
+          btnClick={btnClick} 
           onSubmit={onSubmit}
           toggle={toggle}
           ratings={ratings} />
         }
       </div>
 
-        <div class="attribution">
+        <div className="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
           Coded by <a href="https://github.com/thenels0n">thenels0n</a>.
         </div>
-    </>
+  </>
   );
 }
 

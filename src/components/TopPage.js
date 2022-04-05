@@ -10,8 +10,8 @@ const TopPage = (props) => {
     <div>
         <Header />
       <BodyText />
-      <Buttons onClick={props.onClick} rate={props.ratings}/>
-      <SubmitButton nextPage={props.nextPage} bg='hsl(0, 0%, 100%)' color='hsl(25, 97%, 53%)' onClick={props.onSubmit} />
+      <Buttons btnClick={props.btnClick} rate={props.ratings}/>
+      <SubmitButton nextPage={props.nextPage} submitClick={props.onSubmit} />
     </div>
   )
 }
